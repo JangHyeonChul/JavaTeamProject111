@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{css/menu.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cca4aa8399.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+<div th:>
+  <div class="app-header-container">
+    <div class="app-header-left">Forbiden.</div>
+
+    <div th:form="@{/Test}">
+      <nav thclass="app-header-cnav">
+        <ul>
+          <li class="app-header-cnav-item"><i class="fas fa-home fa-lg"></i>홈</li>
+          <li class="app-header-cnav-item"><i class="fas fa-fire fa-lg"></i>인기글</li>
+          <li class="app-header-cnav-item"><i class="fas fa-comment fa-lg"></i>게시판</li>
+          <li class="app-header-cnav-item"><i class="fas fa-scroll fa-lg"></i>공지</li>
+        </ul>
+
+      </nav>
+
+    </div>
+
+    <div class="app-header-right">
+
+      <a id="login-btn" onclick="openModal()">로그인</a>
+      <a class="app-header-register">회원가입</a>
+
+
+    </div>
+
+  </div>
+
+</div>
+<div class="app-header-space"></div>
+<div class="app-layout">
+  <div class="app-member-card-header"></div>
+
+</div>
+
+<div id="modal" class="modal-register-scheme">
+  <div class="modal-register-overlay">
+    <div class="modal-register-form">
+      <div class="modal-header">
+        <h3>로그인</h3>
+        <i onclick="closeModal()" class="fas fa-times"></i>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="modal-login">
+            <h2>이메일 주소</h2>
+            <input type="email" placeholder="user@email.com">
+          </div>
+          <div class="modal-login">
+            <h2>패스워드</h2>
+            <input type="password" placeholder="*********">
+          </div>
+          <div class="modal-memory">
+            <div class="memory-check">
+              <input type="checkbox">
+              <p>아이디 기억</p>
+            </div>
+            <a>ID/PW 찾기</a>
+          </div>
+          <button class="modal-submit" type="submit">로그인</button>
+
+
+
+
+        </form>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="modaljs.js"></script>
+</body>
+</html>
